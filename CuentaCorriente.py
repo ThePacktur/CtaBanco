@@ -10,11 +10,23 @@ class CuentaCorriente(CuentaBancaria):
         super().__init__(titular, fecha, monto)
 
     def deposito(self,saldo):
-        pass
-    
+        depo = self.get_monto + saldo
+        return depo
+    def giro(self, saldo):
+        if self.get_monto >= saldo:
+            self.get_monto -= saldo
+        else:
+            print("Saldo Insuficiente para realizar la operacion. ")
+    def obtener_saldo(self):
+        return self.get_monto
+
     def imp(self):
         return super().imp()
     
 
-    def __str__(self) -> str:
-        return super().__str__()
+    def __str__(self):
+        imp = super().__str__()
+        imp += f"\nDeposito: {self.deposito()}"
+        imp += f"\nGiro: {self.giro()}"
+        imp += f"\nObtener Saldo: {self.obtener_saldo()}"
+        return imp
