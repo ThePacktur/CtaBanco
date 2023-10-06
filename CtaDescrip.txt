@@ -1,0 +1,11 @@
+Elaborar un programa en py que tenga una super clase CuentaBancaria y tres subClases (CuentaRut,CuentaInversion,CuentaCorriente).
+definir los atributos titular, fecha, monto y una funcion para imprimir los datos en la clase CuentaBancaria.
+
+la Clase CuentaRut tendra una funcion para heredar los datos(init) y uno para monstar informacion.
+
+La clase CuentaInversion tendra dos atributos propios: plazo e interes. tendra una funcion para heredar datos de la clase CuentaBancaria(init), una funcion para calcular el valor total del interes (monto*interes/100)
+y otra funcion para mostrar la informacion, datos del titular, monto inicial, plazo, interes, total de interes y monto final.
+
+la CuentaCorriente tendra una funcion para heredar datos de la clase CuentaBancaria(init) y tres funciones depositar en la cuenta Girar un monto de dinero de la cuenta y obtener el sueldo de la cuenta. Al crear una cuenta debe tener saldo cero, 
+y al girar se debe validar que tenga saldo en caso contrario, le debe inficar que tiene saldo insuficiente para realizar la operacion
+se le pide crear al menos un objeto de cada subclase pero probar su funcionalidad.
