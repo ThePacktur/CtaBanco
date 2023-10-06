@@ -9,7 +9,30 @@ class CuentaIneverciones(CuentaBancaria):
         self.__interes = interes
 
 
+    def get_plazo(self):
+        return self.__plazo
+
+    def get_interes(self):
+        return self.__interes
+
     def calculo(self):
-        cal = self.__monto * self.__interes / 100
+        
+        cal = self.get_monto * self.__interes / 100
+        #cal = self.get_monto * self.get_interes / 100
+        #cal = super().get_monto * self.__interes / 100 
         return cal
     
+    def imp(self):
+        print("Informacion Cuenta de interes: ")
+        super().imp()
+        print(f"Plazo: {self.__plazo}")
+        print(f"interes: {self.__interes}")
+        print(f"Claculo de interes: {self.calculo()}")
+        print(f"Monto Total: {self.__monto + self.calculo()}")
+        
+    def __str__(self) -> str:
+        imp = super().__str__()
+        imp += f"\nPlazo: {self.__plazo}"
+        imp += f"\ninteres: {self.__interes}"
+        imp += f"\nCalculo de interes: {self.calculo()}"
+        return imp

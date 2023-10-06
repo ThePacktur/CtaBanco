@@ -18,6 +18,7 @@ class CuentaBancaria:
         return self.__monto
     
     def imp(self):
+        print("Bienvenido al Programa de calculo de saldo e interes del Banco virtual.")
         print(f"\nTitular: {self.__titular}")
         print(f"\nFecha: {self.__fecha}")
         print(f"\nMonto: {self.__monto}")
